@@ -1,6 +1,6 @@
 package com.example.catalogservice.controller;
 
-import com.example.catalogservice.model.DTO.MovieDTO;
+import com.example.catalogservice.model.Movie;
 import com.example.catalogservice.service.MovieEndpoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +18,7 @@ public class MovieController {
     private MovieEndpoint movieEndpoint;
 
     @RequestMapping(method = RequestMethod.GET, value = "/catalog/{genre}")
-    public ResponseEntity<List<MovieDTO>> getCatalog(@PathVariable String genre){
+    public ResponseEntity<List<Movie>> getCatalog(@PathVariable String genre){
         return new ResponseEntity<>(movieEndpoint.getMoviesByGenre(genre), HttpStatus.OK);
     }
 }
