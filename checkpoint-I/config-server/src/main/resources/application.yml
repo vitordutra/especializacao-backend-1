@@ -7,6 +7,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/vitordutra/configs
+          uri: https://github.com/vitordutra/especializacao-backend-1/checkpoint-I/config-files
 
 
