@@ -1,0 +1,22 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+#  endpoint:
+#    health:
+#      show-details: always
+info:
+  author: João Vitor Dutra P. Gois
+  mail: tulio.l.viglione@gmail.com
+  cel: +559898989898
+server:
+  port: ${PORT:9999}
+message: Hello config world!
